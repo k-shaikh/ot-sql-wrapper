@@ -41,7 +41,7 @@ func main() {
 
 	ctx := context.Background()
 	db, err := otsql.Open(ctx, "mysql",
-		"root:welcome@tcp(127.0.0.1:3406)/hammer")
+		"<usename>:<pwd>@tcp(127.0.0.1:3306)/<dbname>")
 	if err != nil {
 		log.Fatal(err)
 	}

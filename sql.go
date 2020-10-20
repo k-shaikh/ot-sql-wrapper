@@ -74,7 +74,7 @@ func startSpan(ctx context.Context, name string, attribs map[string]string) (con
 	tropts := []trace.SpanOption{}
 	// tropts = append(tropts, opts...)
 	tropts = append(tropts, trace.WithSpanKind(trace.SpanKindInternal))
-	tr := global.Tracer("sql-span-wrapper")
+	tr := global.Tracer("otsql-wrapper")
 	ctx, span := tr.Start(ctx, name, tropts...)
 
 	// add headers from request as span attributes
